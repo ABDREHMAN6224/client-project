@@ -1,5 +1,5 @@
 "use client"
-import React, { useRef, } from "react";
+import React, { useRef} from "react";
 import {FaChevronRight} from "react-icons/fa"
 import styles from "./store.module.css";
 import SingleProduct from "@/components/SingleProduct";
@@ -105,7 +105,7 @@ const Store = () => {
       code: [35.939166515504624, -118.33661544779294],
     },
   ];
-  const mapRef=useRef()
+  const mapRef=useRef(null)
  
 
   const handleClick=(d)=>{
