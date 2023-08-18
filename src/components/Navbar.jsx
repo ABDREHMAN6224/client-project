@@ -6,7 +6,7 @@ import styles from "./navbar.module.css"
 import { useAppContext } from '../../context/context'
 const Navbar = () => {
   const {color,handleScroll,border}=useAppContext()
-  if(typeof window !== "undefined"){
+  if(typeof window != "undefined"){
     window.addEventListener('scroll',handleScroll)
   }
   return (
