@@ -8,6 +8,7 @@ export const AppProvider=({children})=>{
     const [color,setColor]=useState("rgba(24, 63, 38,1)")
     const [border,setBorder]=useState("1px solid white")
     const handleScroll=()=>{
+        if(typeof window !== "undefined"){
         console.log(window.scrollY)
         if(window.scrollY>130)
         {
@@ -17,7 +18,7 @@ export const AppProvider=({children})=>{
             setColor("rgba(24, 63, 38,0.7)")
             setBorder("1px solid white")
         }
-
+}
     }
     return(
         <AppContext.Provider value={{color,handleScroll,border}}>
