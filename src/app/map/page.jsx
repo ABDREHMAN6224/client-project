@@ -112,15 +112,14 @@ const Store = () => {
       code: [35.939166515504624, -118.33661544779294],
     },
   ];
-  // const mapRef=useRef(null)
+  const mapRef=useRef(null)
  
 
   const handleClick=(d)=>{
-      // const {current={}}=mapRef
-      // if(current!={}){
-      // mapRef.current.setView(d);
-    // }
-  }
+      const {current={}}=mapRef
+      if(current!={}){
+      mapRef.current.setView(d);
+    }}
   return (
     <div className={styles.page}>
       <div className={styles.container}>
@@ -134,12 +133,7 @@ const Store = () => {
               return (
                 <Marker key={d.id}
                   position={d.code}
-                  icon={L.divIcon({
-                    iconSize: [40, 40],
-                    iconAnchor: [38 / 2, 38 + 9],
-                    className: "marker",
-                    html: "🚩",
-                  })}
+                  
                 >
                   <Popup>{d.title}</Popup>
                 </Marker>
