@@ -6,10 +6,8 @@ import SingleProduct from "@/components/SingleProduct";
 
 import { MapContainer, TileLayer ,Marker,Popup} from "react-leaflet";
 import "leaflet/dist/leaflet.css";
-
+import L from "leaflet";
 const Store = () => {
- 
-
   const data = [
     {
       id: 1,
@@ -113,8 +111,6 @@ const Store = () => {
       mapRef.current.setView(d);
     
     }
-
-   
   return (
     <div className={styles.page}>
       <div className={styles.container}>
