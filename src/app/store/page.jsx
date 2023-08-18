@@ -1,5 +1,5 @@
 "use client"
-import React, { useCallback, useMemo, useRef, useState } from "react";
+import React, { useRef, } from "react";
 import {FaChevronRight} from "react-icons/fa"
 import styles from "./store.module.css";
 import SingleProduct from "@/components/SingleProduct";
@@ -7,7 +7,7 @@ import SingleProduct from "@/components/SingleProduct";
 import { MapContainer, TileLayer ,Marker,Popup} from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 
-import L from "leaflet";
+// import L from "leaflet";
 
 const Store = () => {
  
@@ -111,9 +111,8 @@ const Store = () => {
  
 
     const handleClick=(d)=>{
-      const {current}=mapRef
+      const {current={}}=mapRef
       mapRef.current.setView(d);
-      console.log(current);
     
     }
 
