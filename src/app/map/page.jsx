@@ -4,7 +4,7 @@ import {FaChevronRight} from "react-icons/fa"
 import styles from "./store.module.css";
 import SingleProduct from "@/components/SingleProduct";
 
-// import { MapContainer, TileLayer ,Marker,Popup} from "react-leaflet";
+import { MapContainer, TileLayer ,Marker,Popup} from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 
@@ -112,20 +112,19 @@ const Store = () => {
       code: [35.939166515504624, -118.33661544779294],
     },
   ];
-  const mapRef=useRef(null)
+  // const mapRef=useRef(null)
  
 
   const handleClick=(d)=>{
-      const {current={}}=mapRef
-      if(current!={}){
-      mapRef.current.setView(d);
-    }}
+      // const {current={}}=mapRef
+      // if(current!={}){
+      // mapRef.current.setView(d);
+    // }
+  }
   return (
     <div className={styles.page}>
       <div className={styles.container}>
         <div className={styles.map}>
-  
-{/* 
           <MapContainer zoom={25} center={data[0].code} ref={mapRef}>
             <TileLayer
               attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -146,7 +145,7 @@ const Store = () => {
                 </Marker>
               );
             })}
-          </MapContainer> */}
+          </MapContainer>
         </div>
         <div className={styles.data}>
           <div className={styles.info}>
