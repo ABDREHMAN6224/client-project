@@ -7,8 +7,6 @@ import SingleProduct from "@/components/SingleProduct";
 import { MapContainer, TileLayer ,Marker,Popup} from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 
-// import L from "leaflet";
-
 const Store = () => {
  
 
@@ -107,10 +105,10 @@ const Store = () => {
       code: [35.939166515504624, -118.33661544779294],
     },
   ];
-  const mapRef=useRef(null)
+  const mapRef=useRef()
  
 
-    const handleClick=(d)=>{
+  const handleClick=(d)=>{
       const {current={}}=mapRef
       mapRef.current.setView(d);
     
